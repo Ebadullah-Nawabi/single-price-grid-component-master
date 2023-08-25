@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 62.5% = 10px */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(204, 43%, 93%);
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+.container {
+  max-width: 50%;
+}
+
+.pricing-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 16px 20px 10px hsl(0, 0%, 0%, 0.08);
+}
+
+.primary {
+  grid-column: 1 / -1;
+  background-color: hsl(0, 100%, 100%);
+  padding: 4.8rem;
+}
+
+.primary-heading {
+  font-size: 2.6rem;
+  color: hsl(179, 62%, 43%);
+  margin-bottom: 2.4rem;
+  letter-spacing: -0.5px;
+}
+
+.post-heading {
+  font-size: 1.8rem;
+  color: hsl(71, 73%, 54%);
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+}
+
+.primary-text {
+  color: hsl(218, 22%, 67%);
+  line-height: 1.6;
+}
+
+.pricing-details {
+  padding: 4.8rem;
+  background-color: hsl(179, 62%, 43%);
+  color: hsl(0, 100%, 100%);
+}
+
+.secondary-heading {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.price {
+  font-size: 3.8rem;
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.price span {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: hsl(204, 43%, 93%, 0.7);
+}
+
+.pricing-text {
+  margin-bottom: 3.2rem;
+  font-size: 1.7rem;
+}
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  background-color: hsl(71, 73%, 54%);
+  color: hsl(0, 100%, 100%);
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1.6rem 0;
+  border-radius: 7px;
+  font-size: 1.8rem;
+  box-shadow: 0 10px 10px 0 hsl(0, 0%, 0%, 0.1);
+}
+
+.reasons {
+  padding: 4.8rem;
+  color: hsl(0, 100%, 100%, 0.8);
+  background-color: hsl(179, 62%, 43%, 0.85);
+}
+
+.reasons-list {
+  list-style: none;
+  font-size: 1.6rem;
+}
+
+.list-item {
+  margin-bottom: 0.5rem;
+}
+
+.list-item:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 544px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .container {
+    max-width: 85%;
+    margin: 5rem auto;
+  }
+
+  .pricing-section {
+    grid-template-columns: 1fr;
+  }
+
+  .primary,
+  .pricing-details,
+  .reasons {
+    padding: 2.8rem;
+  }
+}
